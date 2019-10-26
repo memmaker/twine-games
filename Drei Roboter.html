@@ -43,7 +43,7 @@ tw-story[tags~="no-footer"] tw-include[type="footer"] {
 tw-sidebar {display: none;}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Tatort" tags="" position="700,500" size="200,200">Ein alter Mann liegt reglos im Flur. 
 
-Die [[Leiche]] liegt zu Füßen der Treppe, die auf den [[Dachboden]] führt. (if: not $jamesAtCrimeScene)[Es sind Geräusche von dort zu vernehmen.]
+Die [[Leiche]] liegt zu Füßen der Treppe, die auf den [[Dachboden]] führt. (if: not $jamesAtCrimeScene)[Es sind Geräusche von dort zu vernehmen. Du könntest [[James rufen]].]
 (if: $jamesAtCrimeScene)[
 [[James-&gt;James am Tatort]], der Butler und ein Androide vom Typ 22-12, starrt ausdruckslos auf den toten Körper vor ihm.
 ]
@@ -212,7 +212,7 @@ Ersatzteile für die 22-12er Serie, Meßgeräte für Spektralanalyse und jede Me
 
 High-End aber Low-Budget. Trotzdem: Wer hier an gearbeitet hat wusste was er tut und hatte das Equipment Androiden zu modifizieren.
 
-Es steht eine [[Werkzeugkiste]] mit digitalem Schloß in der Ecke.
+Es steht eine [[Werkzeugkiste]] mit Passwortschutz in der Ecke.
 
 Du kannst die Werkstatt auf dem gleichen Weg wieder [[verlassen-&gt;Außerhalb der Hütte]] wie Du sie betreten hast.</tw-passagedata><tw-passagedata pid="22" name="James beobachten" tags="" position="1000,1050" size="100,100">James geht pflichtbewusst seiner Arbeit nach und räumt den Dachboden auf. 
 Vor allem die Ordnung der Memorabilia lässt ihm scheinbar keine Ruhe.
@@ -268,18 +268,18 @@ Du wendest Dich wieder dem [[Schreibtisch]] zu.</tw-passagedata><tw-passagedata 
 
 Die ersten ein Dutzend Dokumente helfen nicht weiter.
 
-Wendest Du Dich wieder dem [[Schreibtisch]] zu oder durchforstet Du weiter den [[Papierstapel-&gt;Papierstapel 2]]?</tw-passagedata><tw-passagedata pid="30" name="Werkzeugkiste" tags="" position="350,1150" size="100,100">Die Werkzeuge sind durch ein digitales Schloß mit Passwortmechanismus gesichert.
+Wendest Du Dich wieder dem [[Schreibtisch]] zu oder durchforstet Du weiter den [[Papierstapel-&gt;Papierstapel 2]]?</tw-passagedata><tw-passagedata pid="30" name="Werkzeugkiste" tags="" position="300,1150" size="100,100">Die Werkzeuge sind durch ein digitales Schloß mit Passwortmechanismus gesichert.
 
-[[Kombination eingeben]]</tw-passagedata><tw-passagedata pid="31" name="Kombination eingeben" tags="" position="350,1300" size="100,100">{
+[[Passwort eingeben]]</tw-passagedata><tw-passagedata pid="31" name="Passwort eingeben" tags="" position="350,1300" size="100,100">{
 (set: $password to (prompt: &quot;Passwort eingeben&quot;, &quot;&quot;))
 
 (if: (lowercase: $password) is &quot;samira&quot;)[Ein kurzes Klickgeräusch deutet den Erfolg an. [[Die Werkzeugkiste steht offen-&gt;Offene Werkzeugkiste]].]
 
-(else:)[Nichts passiert. Das war offensichtlicht nicht das richtige Passwort. Die [[Werkzeugkiste]] bleibt verschlossen.]
+(else:)[Nichts passiert. Das war offensichtlicht nicht das richtige Passwort. Die [[Werkzeugkiste]] bleibt verschlossen. Vielleicht schaust Du dich doch lieber weiter in der [[Werkstatt]] um.]
 }
 </tw-passagedata><tw-passagedata pid="32" name="Offene Werkzeugkiste" tags="" position="350,1450" size="100,100">Es sind einige High-Tech Werkzeuge für die Modifikation von Androiden im Werkzeugkasten zu finden.
 
-Besonders interessant erscheint das [[Werkzeug für die Herstellung des Werkzustands]].</tw-passagedata><tw-passagedata pid="33" name="Werkzeug für die Herstellung des Werkzustands" tags="" position="500,1300" size="100,100">Mit diesem Gerät lassen sich Androiden wieder auf den Werkszustand zurückversetzen. Es hat einen kleinen Schalthebel mit drei Einstellungen und einen roten Knopf.
+Besonders interessant erscheint das [[Werkzeug für die Herstellung des Werkzustands]].</tw-passagedata><tw-passagedata pid="33" name="Werkzeug für die Herstellung des Werkzustands" tags="" position="500,1250" size="100,100">Mit diesem Gerät lassen sich Androiden wieder auf den Werkszustand zurückversetzen. Es hat einen kleinen Schalthebel mit drei Einstellungen und einen roten Knopf.
 
 Du steckst das Gerät ein und schaust Dich weiter in der [[Werkstatt]] um.
 
@@ -388,7 +388,11 @@ Gerne direkt per E-Mail an: memmaker@32kb.org</tw-passagedata><tw-passagedata pi
 &lt;h6&gt;Geschrieben und erdacht von: Felix Ruzzoli&lt;/h6&gt;
 
 [[Start-&gt;Am Anfang]]
-&lt;/center&gt;</tw-passagedata></tw-storydata>
+&lt;/center&gt;</tw-passagedata><tw-passagedata pid="48" name="James rufen" tags="" position="1000,750" size="100,100">&quot;Einen kleinen moment, bitte&quot;, ertönt die synthetische Stimme von oben.
+
+Es ist zu hören wie Kartons geschlossen und herumgeschoben werden und kurze Zeit später erscheint James im [[Flur-&gt;Tatort]].
+
+(set: $jamesAtCrimeScene to true)</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
