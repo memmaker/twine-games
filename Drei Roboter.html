@@ -38,7 +38,10 @@ tw-story[tags~="no-header"] tw-include[type="header"] {
 }
 tw-story[tags~="no-footer"] tw-include[type="footer"] {
 	display: none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Tatort" tags="" position="700,500" size="200,200">Ein alter Mann liegt reglos im Flur. 
+}
+
+tw-sidebar {display: none;}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Tatort" tags="" position="700,500" size="200,200">Ein alter Mann liegt reglos im Flur. 
 
 Die [[Leiche]] liegt zu Füßen der Treppe, die auf den [[Dachboden]] führt. (if: not $jamesAtCrimeScene)[Es sind Geräusche von dort zu vernehmen.]
 (if: $jamesAtCrimeScene)[
@@ -109,6 +112,8 @@ Eine steile Treppe führt [[hinab-&gt;Tatort]].</tw-passagedata><tw-passagedata 
 
 (else-if: (lowercase: $keyword) is &quot;kisten&quot;)[Die enthalten Fotos und Briefe. Unser Besitzer hat sie manchmal hervorgeholt und angeschaut.]
 
+(else-if: (lowercase: $keyword) is &quot;ports&quot; or (lowercase: $keyword) is &quot;port&quot; or (lowercase: $keyword) is &quot;input&quot; or (lowercase: $keyword) is &quot;output&quot;)[Das ist die Schnittstelle für die Wartung und andere Verbindungen zur Aussenwelt.]
+
 (else:)[Darüber kann ich nichts sagen.]
 }
 
@@ -127,7 +132,11 @@ Eine steile Treppe führt [[hinab-&gt;Tatort]].</tw-passagedata><tw-passagedata 
 
 (else-if: (lowercase: $keyword) is &quot;edgar&quot;)[Er verhält sich nicht dem Protokoll gemäß. Seine Kommunikation ist deaktiviert. Er sollte überprüft werden.]
 
-(else-if: (lowercase: $keyword) is &quot;schlüssel&quot;)[Die Schlüssel für den Garten? Oh, natürlich hier sind sie. (set: $hasGardenShedKey to true)]
+(else-if: (lowercase: $keyword) is &quot;schlüssel&quot; or (lowercase: $keyword) is &quot;schlüsselbund&quot; or (lowercase: $keyword) is &quot;gartenschlüssel&quot;)[Die Schlüssel für den Garten? Oh, natürlich hier sind sie.
+
+Du nimmst die Schlüssel an dich.(set: $hasGardenShedKey to true)]
+
+(else-if: (lowercase: $keyword) is &quot;ports&quot; or (lowercase: $keyword) is &quot;port&quot; or (lowercase: $keyword) is &quot;input&quot; or (lowercase: $keyword) is &quot;output&quot;)[Das Standard Interface der 22-12er. Es ist für Ein- &amp; Ausgabe Operationen mit anderen Systemen vorgesehen.]
 
 (else:)[Darüber kann ich nichts sagen.]
 }
@@ -314,6 +323,8 @@ Du schaust Dir noch einmal den [[Schreibtisch]] an.</tw-passagedata><tw-passaged
 (else-if: (lowercase: $keyword) is &quot;kisten&quot;)[Enthalten Erinnerungsstücke. Menschen lieben solche Dinge.]
 
 (else-if: (lowercase: $keyword) is &quot;leiche&quot;)[Ich fürchte dass ich hier nicht weiterhelfen kann.]
+
+(else-if: (lowercase: $keyword) is &quot;ports&quot; or (lowercase: $keyword) is &quot;port&quot; or (lowercase: $keyword) is &quot;input&quot; or (lowercase: $keyword) is &quot;output&quot;)[Alex hat sich an meinem Port zu schaffen gemacht. Ich konnte ihn nicht davon abhalten.]
 
 (else:)[Darüber kann ich nichts sagen.]
 }
