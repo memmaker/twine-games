@@ -116,6 +116,8 @@ Eine steile Treppe führt [[hinab-&gt;Tatort]].</tw-passagedata><tw-passagedata 
 
 (else-if: (lowercase: $keyword) is &quot;ports&quot; or (lowercase: $keyword) is &quot;port&quot; or (lowercase: $keyword) is &quot;input&quot; or (lowercase: $keyword) is &quot;output&quot;)[Das ist die Schnittstelle für die Wartung und andere Verbindungen zur Aussenwelt.]
 
+(else-if: (lowercase: $keyword) is &quot;leiche&quot;)[Er liegt da noch nicht lange. Und ich hoffe er wird bald abgeholt.]
+
 (else-if: (lowercase: $keyword) is &quot;passwort&quot;)[Ich darf es nicht verraten, das habe ich Alex versprochen.]
 
 (else:)[Darüber kann ich nichts sagen.]
@@ -143,6 +145,8 @@ Du nimmst die Schlüssel an dich.(set: $hasGardenShedKey to true)]
 (else-if: (lowercase: $keyword) is &quot;transfer&quot; or (lowercase: $keyword) is &quot;bewusstseinstransfer&quot; or (lowercase: $keyword) is &quot;experiment&quot;)[Sie haben mich. Ich bin Alexander Reed, im Körper meines Dienstroboters. Die Frage ist, was tun Sie nun mit diesem Wissen?]
 
 (else-if: (lowercase: $keyword) is &quot;ports&quot; or (lowercase: $keyword) is &quot;port&quot; or (lowercase: $keyword) is &quot;input&quot; or (lowercase: $keyword) is &quot;output&quot;)[Das Standard Interface der 22-12er. Es ist für Ein- &amp; Ausgabe Operationen mit anderen Systemen vorgesehen.]
+
+(else-if: (lowercase: $keyword) is &quot;leiche&quot;)[Ich hab den Körper gefunden als ich gerade auf dem Weg auf den Dachboden war. Dann habe ich den Todesfall telefonisch gemeldet.]
 
 (else:)[Darüber kann ich nichts sagen.]
 }
@@ -172,7 +176,7 @@ Das ist korrekt.
 [[Aus Furcht-&gt;Weiter ermitteln]]
 [[Aus Eifersucht-&gt;Weiter ermitteln]]
 [[Aus Einsamkeit-&gt;Maschinengericht Part 3]]</tw-passagedata><tw-passagedata pid="14" name="Weiter ermitteln" tags="" position="1000,900" size="100,100">Falsch. [[Du solltest weiter ermitteln-&gt;Tatort]]</tw-passagedata><tw-passagedata pid="15" name="Maschinengericht Part 3" tags="" position="1150,950" size="100,100">{
-(set: $answer to (prompt: &quot;Wer oder was war der Antrieb für Alexnder Reed sein Testament zu ändern?&quot;, &quot;&quot;))
+(set: $answer to (prompt: &quot;Wer oder was war der Antrieb für Alexander Reed sein Testament zu ändern?&quot;, &quot;&quot;))
 
 (if: (lowercase: $answer) is &quot;samira&quot;)
 [
@@ -312,7 +316,7 @@ Du schaust Dir noch einmal den [[Schreibtisch]] an.</tw-passagedata><tw-passaged
 
 (else-if: (lowercase: $keyword) is &quot;edgar&quot;)[Das bin ich. Vielen Dank für die Wiederherstellung.]
 
-(else-if: (lowercase: $keyword) is &quot;alex&quot; or (lowercase: $keyword) is &quot;alexander&quot;)[Er war es der mich beschädigt hat. Bei seinen... Experimenten.]
+(else-if: (lowercase: $keyword) is &quot;alex&quot; or (lowercase: $keyword) is &quot;alexander&quot;)[Er war es der mich beschädigt hat. Bei seinen... Experimenten. Zuerst hatte er nur an Samira Modifikationen vorgenommen. Nach seinem ersten Erfolg hat er sich daran gemacht Änderungen an mir vorzunehmen.]
 
 (else-if: (lowercase: $keyword) is &quot;samira&quot;)[Sie hält sich nicht mehr an alle Protokolle. Irgendwas stimmt nicht mit ihr.]
 
@@ -322,7 +326,9 @@ Du schaust Dir noch einmal den [[Schreibtisch]] an.</tw-passagedata><tw-passaged
 
 (else-if: (lowercase: $keyword) is &quot;roboter&quot; or (lowercase: $keyword) is &quot;androide&quot;)[Ich bin ein Garten-Modell, Serie C. Alex hat mich zuerst gekauft.]
 
-(else-if: (lowercase: $keyword) is &quot;transfer&quot; or (lowercase: $keyword) is &quot;experiment&quot;)[Bewusstseinstransfer. Alex hat es zuerst bei mir versucht. Es ging schief.]
+(else-if: (lowercase: $keyword) is &quot;experiment&quot; or (lowercase: $keyword) is &quot;versuche&quot; or (lowercase: $keyword) is &quot;versuchsobjekt&quot;)[Bewusstseinstransfer. Alex hat es zuerst bei mir versucht. Es ging schief.]
+
+(else-if: (lowercase: $keyword) is &quot;transfer&quot; or (lowercase: $keyword) is &quot;bewusstseinstransfer&quot;)[Das Ziel von Alex war es wohl, sein Bewusstsein in den Körper eines Androiden zu transferieren.]
 
 (else-if: (lowercase: $keyword) is &quot;dachboden&quot;)[Mein Refugium ist der Garten. Ich bleibe meist fern vom Dachboden.]
 
@@ -330,7 +336,7 @@ Du schaust Dir noch einmal den [[Schreibtisch]] an.</tw-passagedata><tw-passaged
 
 (else-if: (lowercase: $keyword) is &quot;kisten&quot;)[Enthalten Erinnerungsstücke. Menschen lieben solche Dinge.]
 
-(else-if: (lowercase: $keyword) is &quot;leiche&quot;)[Ich fürchte dass ich hier nicht weiterhelfen kann.]
+(else-if: (lowercase: $keyword) is &quot;leiche&quot;)[Der Körper von Alex, ja. Aber ich halte es nicht für eine Leiche. Alex selbst ist ja am Leben.]
 
 (else-if: (lowercase: $keyword) is &quot;ports&quot; or (lowercase: $keyword) is &quot;port&quot; or (lowercase: $keyword) is &quot;input&quot; or (lowercase: $keyword) is &quot;output&quot;)[Alex hat sich an meinem Port zu schaffen gemacht. Ich konnte ihn nicht davon abhalten.]
 
